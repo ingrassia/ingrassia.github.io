@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/*
+ * CSS for MichaelIngrassia.com generative art.
+ * (c) 2017 Michael Ingrassia
+ */
+
+/*
+ * ART GRID
+ */
+
+.artGrid
+{
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.artGrid img
+{
+  margin: 0px;
+  border: 0px;
+  padding: 2px;
+}
+
+.artGrid img:hover
+{
+  margin: 0px;
+  border: 1px solid #333;
+  padding: 1px;
+}
+
+.artGrid a
+{
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+.artGrid a:hover
+{
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+/* adjust number of columns for width */
+
+.artGrid img
+{
+  max-width: 47.75%;
+  width: auto;
+  height: auto;
+}
+
+@media (min-width: 550px) {
+  .artGrid img
+  {
+    max-width: 31.75%;
+    width: auto;
+    height: auto;
+  }
+}

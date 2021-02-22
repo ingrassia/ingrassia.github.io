@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+/*
+ * Base CSS for MichaelIngrassia.com.
+ * (c) 2017 Michael Ingrassia
+ */
+
+/*
+ * TOP LEVEL SECTIONS
+ */
+
+body
+{
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  background-color: #fff;
+  color: #333;
+  font: 14px Helvetica Neue, Helvetica, Verdana, Geneva, Arial, Sans-Serif;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+/* on larger screens lets make text a bit bigger */
+
+@media (min-width: 400px) {
+  body
+  {
+    font-size: 16px;
+  }
+}
+
+/* Would be nice to use 550px like everywhere else, but awkward linebreaks is not 600px */
+
+@media (min-width: 600px) {
+  body
+  {
+    font-size: 18px;
+  }
+}
+
+.header
+{
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  background-color: #333;
+  background-image: url(header.jpg);
+  background-position: center 0;
+  background-repeat: repeat;
+  color: #fff;
+}
+
+.main
+{
+  padding: 1em 0px 0px 0px; /* just a little padding on top from tabs */
+}
+
+.footer
+{
+  margin: 0px 1em 0px 1em;
+  border: 0px;
+  padding: 0.5em 0px 0.5em 0px;
+  background-color: #fff;
+  color: #333;
+  font-size: 0.75em;
+}
+
+.centerContent
+{
+  max-width: 740px;
+  margin: 0px auto 0px auto;
+  border: 0px;
+  padding: 0px 1em 0px 1em;
+}
+
+/*
+ * TITLES
+ */
+
+h1
+{
+  margin: 0px;
+  border: 0px;
+  padding: 0.75em 0px 0.25em 0px;
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+}
+
+@media (min-width: 600px) {
+  h1
+  {
+    letter-spacing: 0.1em;
+  }
+}
+
+h2
+{
+  margin: 0px;
+  border: 0px;
+  padding: 0.5em 0px 0.25em 0px;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+h3
+{
+  margin: 0px;
+  border: 0px;
+  padding: 0.5em 0px 0.25em 0px;
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+/*
+ * LINKS
+ */
+
+a
+{
+  color: #0F5B7F;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 300;
+}   
+
+a:hover
+{
+  color: #0F5B7F;
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+/*
+ * MENU
+ */
+
+.menuTrigger
+{
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="menuTrigger"]
+{
+  cursor: pointer;
+  float: right;
+}
+
+.menuTrigger:checked ~ .menu
+{
+  display: block;
+}
+
+/* drop down menu for width < 550 */
+
+@media (max-width: 549px) {
+  .menu
+  {
+    display: none;
+    width: 100%;
+    margin: 0px 0px 0px -1em;
+    border: 0px;
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: rgba(255,255,255, 0.2);
+  }
+
+  .menu li
+  {
+    display: block;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    list-style-type: none;
+  }
+
+  .menu li a
+  {
+  }
+
+  .menu li a:link,
+  .menu li a:visited
+  {
+    display: block;
+    width: 100%;
+    margin: 0px 0px 0px -1em;
+    border: 0px;
+    padding: 1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  .menu li a:hover
+  {
+    background: #333;
+  }
+
+  .menu .selectedMenuItem a:link,
+  .menu .selectedMenuItem a:visited
+  {
+    background: #fff;
+    color: #333;
+  }
+}
+
+/* tab menu for width > 550 */
+
+@media (min-width: 550px) {
+
+  label[for="menuTrigger"]
+  {
+    display: none;
+  }
+
+  .menu
+  {
+    display: block;
+    margin: 0px;
+    border: 0px;
+    padding: 0.5em 0px 2.05em 0px;
+  }
+
+  .menu li
+  {
+    display: inline;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    list-style-type: none;
+  }
+    
+  .menu li a:link,
+  .menu li a:visited
+  {
+    margin: 0px 0.2em;
+    border: 1px solid #fff;
+    padding: 0.5em 0.7em;
+    color: #fff;
+    float: left;
+    line-height: 100%;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  .menu li a:hover
+  {
+    background: #333;
+  }
+
+  .menu .selectedMenuItem a:link,
+  .menu .selectedMenuItem a:visited
+  {
+    background: #fff;
+    color: #333;
+  }
+
+}

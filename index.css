@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/*
+ * CSS for MichaelIngrassia.com FindMe bar.
+ * (c) 2017 Michael Ingrassia
+ */
+
+/*
+ * FIND ME BAR
+ */
+
+.findmebar
+{
+  margin: 0px;
+  border: 0px;
+  padding: 0.5em 0px 0.5em 0px;
+  font-size: 1.75em;
+}
+
+.findmebar li
+{
+  margin: 0px;
+  border: 0px;
+  padding: 0px 0.25em 0px 0.25em;
+  display: inline;
+  list-style-type: none;
+}
+
+.findmebar a
+{
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* larger screens should have larger icons */
+
+@media (min-width: 400px) {
+
+.findmebar
+{
+  font-size: 2em;
+}
+
+}
+
+@media (min-width: 550px) {
+
+.findmebar
+{
+  font-size: 2.5em;
+}
+
+}
+
+/* force the correct color of icons */
+
+.facebook-color { color: #3b5998 }
+.flickr-color { color: #ff0084 }
+.github-color { color: #333333 }
+.instagram-color { color: #ee0975 }
+.linkedin-color { color: #0e76a8 }
+.strava-color { color: #fc4c02 }
+.twitter-color { color: #00aced }
